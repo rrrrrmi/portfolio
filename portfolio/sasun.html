@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <style>
+        .box{
+            width:200px;
+            height:400px;
+            position: absolute;
+            left:300px; top:300px;
+            transform-origin:left top;
+            transform: rotate(30deg);
+            
+            border:1px #333 solid;
+            transition: .6s;
+        }
+        .box.on{
+            width:200px;
+            height:400px;
+            position: absolute;
+            left:calc(300px + 150px); /* 거리 100 기준 각도 60도 100cos(60) = 50 */
+            top:calc(300px - 259.8px); /* 거리 100 기준 각도 60도 100sin(60) = 86.6 */
+            transform-origin:left top;
+            transform: rotate(30deg);
+            
+            border:1px #333 solid;
+        }
+    </style>
+    
+</head>
+<body>
+    <div class="box">사선이동</div>
+    <button>실행</button>
+
+    <script>
+        $('button').click(
+            function(){
+                $('.box').addClass('on');
+            }
+        );
+    </script>
+</body>
+</html>

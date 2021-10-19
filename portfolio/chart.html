@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>chart</title>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+ 	<script src="https://cdnjs.cloudflare.com/ajax/libs/easy-pie-chart/2.1.6/jquery.easypiechart.min.js"></script>
+    <style>
+        #wrap{
+            width:50%;
+            margin: 0 auto;
+        }
+        .chart {
+            float: left; width: 33.33%; height: 200px; text-align: center;
+            position: relative;
+        }
+        .chart span.title{
+            position: absolute; display: block; width: 100%; text-align: center; 
+            top:50%; left: 50%;
+            transform: translate(-50%, -50%);
+        }
+    </style>
+</head>
+<body>
+    <div id="wrap">
+        <div class="chart chart1" data-percent="95">
+            <span class="title">HTML<br>95</span>
+        </div>
+        <div class="chart chart2" data-percent="85">
+            <span class="title">chart2</span>
+        </div>
+        <div class="chart chart3" data-percent="65">
+            <span class="title">chart3</span>
+        </div>
+    </div>
+    
+    <script>
+        
+        $('.chart1').easyPieChart({
+            barColor: '#f16529',
+            trackColor: '#ccc',
+            scaleColor: '#fff',
+            lineCap: 'butt',
+            lineWidth: 20,
+            size: 200,
+            animate: 1000
+            });
+
+        $('.chart2').easyPieChart({
+            barColor: '#1c88c7',
+            trackColor: '#fff',
+            scaleColor: '#ccc',
+            lineCap: 'round',
+            lineWidth: 30,
+            size: 200,
+            animate: 1000
+        }); 
+
+        $('.chart3').easyPieChart({
+            barColor: '#1c88c7',
+            trackColor: '#fff',
+            scaleColor: '#fff',
+            lineCap: 'square',
+            lineWidth: 30,
+            size: 200,
+            animate: 1000
+        });
+
+    </script>
+</body>
+</html>

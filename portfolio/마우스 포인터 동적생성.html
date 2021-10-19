@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>마우스 포인터 동적 생성</title>
+   <style>
+       body{height:100vh;}
+   </style>
+</head>
+<body>
+
+    <script>
+        
+        var m_top;
+        var m_left;
+        var nbox;
+        var bg = document.querySelector("body");
+        bg.addEventListener("mousemove", mm);       
+
+        function mm(e){
+            m_top = e.clientY-25;
+            m_left = e.clientX-25;
+            var box = document.createElement("div");
+            box.style.width="50px";
+            box.style.height="50px";
+            box.style.border="1px #333 solid";
+            box.style.borderRadius="50%";
+            box.style.position="absolute";
+            box.style.top=m_top+"px";
+            box.style.left=m_left+"px";
+            box.animate([ {transform: 'scale(1)',opacity:"1"},
+                          {transform: 'scale(0)',opacity:"0"},
+                        ], 500);            
+            bg.appendChild(box); 
+            setTimeout(function(){bg.removeChild(box)},490);    
+        }
+        
+        
+
+    </script>
+</body>
+</html>

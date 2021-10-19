@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        .container{
+            position:absolute;
+            top:50%;
+            left:-20%;
+            background:#eee;
+        }
+        .ibox{width:600px; height:150px;
+            background:#fee;
+            transform-origin: left center;
+            position: absolute;
+        }
+        .ibox:nth-child(1){
+            /* transform: rotate(90deg) translateX(400px); */
+            background: url("https://cdn.pixabay.com/photo/2016/07/11/15/43/woman-1509956_960_720.jpg");
+        }
+        .ibox:nth-child(2){
+            /* transform: rotate(60deg) translateX(400px); */
+            background: url("https://cdn.pixabay.com/photo/2018/03/12/12/32/woman-3219507_960_720.jpg");
+        }
+        .ibox:nth-child(3){
+            /* transform: rotate(30deg) translateX(400px); */
+            background: url("https://cdn.pixabay.com/photo/2016/03/23/04/01/woman-1274056_960_720.jpg");
+        }
+        .ibox:nth-child(4){
+            /* transform: rotate(0deg) translateX(400px); */
+            background: url("https://cdn.pixabay.com/photo/2016/01/19/17/48/woman-1149911_960_720.jpg");
+        }
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="ibox"></div>
+        <div class="ibox"></div>
+        <div class="ibox"></div>
+        <div class="ibox"></div>
+    </div>
+
+    <script>
+        window.addEventListener('load', roImg);
+        window.addEventListener('wheel', roImg);
+        var ibox = document.querySelectorAll(".ibox");
+        var icount = 0;
+
+        function roImg(){
+            icount--;
+            ibox[0].style.transform = `rotate(${icount}deg) translateX(400px)`;
+            ibox[1].style.transform = `rotate(${icount+30}deg) translateX(400px)`;
+            ibox[2].style.transform = `rotate(${icount+60}deg) translateX(400px)`;
+            ibox[3].style.transform = `rotate(${icount+90}deg) translateX(400px)`;
+        }
+        
+    </script>
+</body>
+</html>
