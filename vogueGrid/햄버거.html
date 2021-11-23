@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<meta name="robots" content="noindex">
+<html>
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width">
+  <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+  <title>햄버거 메뉴</title>
+<style>
+.box{
+  width:320px;
+  height:320px;
+  background:#ff0;
+  box-sizing:border-box;
+  padding:10px;
+  position:relative;
+  
+}
+
+.bar{
+  width:300px;
+  height:60px;
+  background:#ccc;
+  position:absolute;
+  transition:.6s;
+}
+.bar:nth-child(2){
+  transform:translateY(120px);
+}
+.bar:nth-child(3){
+  transform:translateY(120px);
+}
+.bar:nth-child(4){
+  transform:translateY(240px);
+}
+.box.on .bar:nth-child(1){
+  transform:translateY(120px);
+  opacity:0;  
+}
+.box.on .bar:nth-child(4){
+  transform:translateY(120px);
+  opacity:0;  
+}
+.box.on .bar:nth-child(2){
+  
+  background:#fcc;
+  transform:translateY(120px) rotate(-45deg);
+  
+}
+.box.on .bar:nth-child(3){
+  background:#fcc;
+  transform:translateY(120px) rotate(45deg);
+}
+</style>
+</head>
+<body>
+<div class="box">
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+  <div class="bar"></div>
+</div>
+<script>
+  $(".box").click(
+  function(){
+    $(this).toggleClass("on");
+  }
+);
+</script>
+</body>
+</html>
