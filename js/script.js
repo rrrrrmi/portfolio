@@ -13,7 +13,7 @@
         function scrollAni(e){
             
             count++;
-            var gosectioncount = count%7; // 스크롤을 5번 굴리면 이동.
+            var gosectioncount = count%7; // 스크롤 : 섹션 추가할때마다 숫자 수정하기.
             if(e.wheelDelta<0){
                 if(gosectioncount == 0 && sectionCounter<6)sectionCounter++;
             }else{
@@ -59,7 +59,7 @@
         //스크롤 막기 끝
 
         //차트
-        $('.skillchart').click(
+/*         $('.skillchart').click(
             function(){
                 $(this).easyPieChart({
                     barColor: 'seagreen',
@@ -73,6 +73,20 @@
                 var jumsu = $(this).attr('data-percent');
                 $(this).children().children('.jumsu').html(jumsu);
             }
-        );
+        ); */
+
+      
+                $('.skillchart').easyPieChart({
+                    barColor: 'seagreen',
+                    trackColor: 'papayawhip',
+                    scaleColor: '#fff',
+                    lineCap: 'butt',
+                    lineWidth: 10,
+                    size: 100,
+                    animate: 1000
+                });
+                var jumsu = $(this).attr('data-percent');
+                $('.skillchart').children().children('.jumsu').html(jumsu);
+
 
         

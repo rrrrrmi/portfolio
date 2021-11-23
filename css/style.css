@@ -134,7 +134,7 @@ section.active .double pre{
     opacity: 1;   
 }
 section .round{
-    width:40%;
+    width:60%;
     height:24px;
     background: seagreen;
     border-radius: 10px;
@@ -147,7 +147,7 @@ section .round{
     opacity:0;
 }
 section.active .round{
-    width:40%;
+    width:60%;
     height:24px;
     background: seagreen;
     border-radius: 10px;
