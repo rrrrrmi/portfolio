@@ -59,7 +59,7 @@
         //스크롤 막기 끝
 
         //차트
-/*         $('.skillchart').click(
+        $('.skillchart').click(
             function(){
                 $(this).easyPieChart({
                     barColor: 'seagreen',
@@ -70,23 +70,11 @@
                     size: 100,
                     animate: 1000
                 });
-                var jumsu = $(this).attr('data-percent');
-                $(this).children().children('.jumsu').html(jumsu);
+                /* var jumsu = $(this).attr('data-percent');
+                $(this).children().children('.jumsu').html(jumsu); */
             }
-        ); */
+        );
 
-      
-                $('.skillchart').easyPieChart({
-                    barColor: 'seagreen',
-                    trackColor: 'papayawhip',
-                    scaleColor: '#fff',
-                    lineCap: 'butt',
-                    lineWidth: 10,
-                    size: 100,
-                    animate: 1000
-                });
-                var jumsu = $(this).attr('data-percent');
-                $('.skillchart').children().children('.jumsu').html(jumsu);
 
 
         
