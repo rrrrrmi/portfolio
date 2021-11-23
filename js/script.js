@@ -70,8 +70,8 @@
                     size: 100,
                     animate: 1000
                 });
-                /* var jumsu = $(this).attr('data-percent');
-                $(this).children().children('.jumsu').html(jumsu); */
+                var jumsu = $(this).attr('data-percent');
+                $(this).children().children('.jumsu').html(jumsu);
             }
         );
 
