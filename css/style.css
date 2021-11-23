@@ -255,7 +255,7 @@ section.active .chart .graph li:nth-child(3) div{
 #skillcontainer{
     position:absolute;
     width:70%; 
-    left:10%;
+    left:12%;
     top:70vh;
     display: flex;
     
